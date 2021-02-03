@@ -9,18 +9,18 @@ class Restaurant
     @dishes = []
   end
 
-  def closing_time(hours_of_operation)
-    (@opening_time.to_i + hours_of_operation).to_s + ":00"
-  end
-
   # def closing_time(hours_of_operation)
-  #   close = (@opening_time.to_i + hours_of_operation).to_s + ":00"
-  #   if close.to_i >= 24
-  #     (close.to_i - 24).to_s + ":00"
-  #   else
-  #     close
-  #   end
+  #   (@opening_time.to_i + hours_of_operation).to_s + ":00"
   # end
+  #
+  def closing_time(hours_of_operation)
+    close = (@opening_time.to_i + hours_of_operation)
+    if close > 24
+      then "0#{close - 24}:00"
+    else
+      "#{close}:00"
+    end
+  end
 
   def add_dish(dish)
     @dishes << dish
