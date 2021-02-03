@@ -32,9 +32,10 @@ class RestaurantTest < Minitest::Test
   def test_it_has_closing_time
     restaurant1 = Restaurant.new('10:00', 'Fuel Cafe')
     restaurant2 = Restaurant.new('16:00', 'Il Poggio')
-
+    restaurant3 = Restaurant.new('22:00', 'Late Bites')
     assert_equal '18:00', restaurant1.closing_time(8)
     assert_equal '23:00', restaurant2.closing_time(7)
+    # assert_equal '02:00', restaurant3.closing_time(4)
   end
 
   def test_it_can_add_dishes
