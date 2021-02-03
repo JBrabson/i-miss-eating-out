@@ -12,7 +12,8 @@ class Restaurant
   # def closing_time(hours_of_operation)
   #   (@opening_time.to_i + hours_of_operation).to_s + ":00"
   # end
-  #
+  #REFACTORED for edgecasing
+
   def closing_time(hours_of_operation)
     close = (@opening_time.to_i + hours_of_operation)
     if close > 24
