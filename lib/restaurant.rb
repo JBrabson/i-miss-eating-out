@@ -21,4 +21,8 @@ class Restaurant
   #     close
   #   end
   # end
+
+  def add_dish(dish)
+    @dishes << dish
+  end
 end

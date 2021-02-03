@@ -39,7 +39,6 @@ class RestaurantTest < Minitest::Test
   end
 
   def test_it_can_add_dishes
-    skip
     restaurant = Restaurant.new('16:00', 'Il Poggio')
 
     restaurant.add_dish('Burrata')
