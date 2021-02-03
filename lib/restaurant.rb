@@ -10,7 +10,7 @@ class Restaurant
   end
 
   def closing_time(hours_of_operation)
-    close = (@opening_time.to_i + hours_of_operation).to_s + ":00"
+    (@opening_time.to_i + hours_of_operation).to_s + ":00"
   end
 
   # def closing_time(hours_of_operation)
@@ -33,6 +33,16 @@ class Restaurant
   def menu_dish_names
     @dishes.map do |dish|
       dish.upcase
+    end
+  end
+
+  def announce_closing_time(hours_open)
+    close = @opening_time.to_i + hours_open
+    if close > 12
+      close -= 12
+      "#{name} will be closing at #{close}:00PM"
+    else
+    "#{name} will be closing at #{close}:00AM"
     end
   end
 end
